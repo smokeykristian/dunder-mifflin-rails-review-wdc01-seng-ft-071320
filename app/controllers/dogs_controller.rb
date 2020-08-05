@@ -5,6 +5,7 @@ class DogsController < ApplicationController
     end
     
     def new
+        @dog = Dog.new
     end
     
     def show
@@ -15,6 +16,12 @@ class DogsController < ApplicationController
     end
     
     def create
+        name= params[:dog][:name]
+        breed = params[:dog][:breed]
+        age = params[:dog][:age]
+        Dog.create({name: name,breed: breed, age: age})
+        redirect_to dogs_path
+        
     end
 
     

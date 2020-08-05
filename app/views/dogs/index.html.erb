@@ -1,9 +1,9 @@
-<h1> List of Dunder Miflin Dogs </h1>
+<h1> List of Dunder Mifflin Dogs </h1>
 
 <ul>
 <% @dogs.each do |dog| %>
 <li><%= dog.name  %></li>
-<%= link_to "owners", dog_path(dog) %>
+<%= link_to "info", dog_path(dog) %>
 <% end %> 
 </ul>
 
